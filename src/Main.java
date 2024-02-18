@@ -1,24 +1,25 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
-public class repoForFifty {
+public class Main {
     public static void main(String[] args) {
 
-        String stringy = "jjjsuhrjrsjrjarjtkrthjaerth456872yv98tyw398t230-jmtc097  !~ 0T7UY908TYV0WA=TY4=23itquy0ueygi8h9q8ag44362136436jerajjjk";
-        Map<Character, Integer> hashMap = new HashMap<>();
+        String stringy = "aaba111";
+        Map<Character, Integer> treeMap = new TreeMap<>();
 
         //Sets the keys to each ASCII symbol and their values to 0
         for (int i = 0; i < stringy.length(); i++) {
             char c = stringy.charAt(i);
-            if(hashMap.containsKey(c)){
-                hashMap.put(c, hashMap.get(c) + 1);
+            if(treeMap.containsKey(c)){
+                treeMap.put(c, treeMap.get(c) + 1);
             }else{
-                hashMap.put(c,1);
+                treeMap.put(c,1);
             }
         }
         //Prints all the keys which were found inside the string
         System.out.println("\nHashMap entries:");
-        for (Map.Entry<Character, Integer> entry : hashMap.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : treeMap.entrySet()) {
             if(entry.getValue()>0){
                 System.out.println(entry.getKey() + ":" + entry.getValue());
             }
